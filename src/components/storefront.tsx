@@ -40,7 +40,7 @@ import logo from "@/assets/lian-logo.png.asset.json";
 import hero from "@/assets/lian-hero.png.asset.json";
 import dog from "@/assets/dog-promo.png.asset.json";
 import cat from "@/assets/cat-promo.png.asset.json";
-import smallDog from "@/assets/dog-small.png.asset.json";
+import smallDog from "@/assets/husky-special.png.asset.json";
 import footerCat from "@/assets/footer-cat.png.asset.json";
 import footerDog from "@/assets/footer-dog.png.asset.json";
 

@@ -718,6 +718,8 @@ a {
 .promo.small img {
   width: 51%;
   height: 93%;
+  /* the husky has blue eyes and pale fur that multiply would muddy, so composite it normally */
+  mix-blend-mode: normal;
 }
 .promo.small .promo-copy {
   width: 55%;
