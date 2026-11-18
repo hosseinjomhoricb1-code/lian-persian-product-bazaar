@@ -38,8 +38,8 @@ import {
 } from "@/lib/catalog";
 import logo from "@/assets/lian-logo.png.asset.json";
 import hero from "@/assets/lian-hero.png.asset.json";
-import dog from "@/assets/dog-promo.png.asset.json";
-import cat from "@/assets/cat-promo.png.asset.json";
+import dog from "@/assets/lian-dog-banner.webp.asset.json";
+import cat from "@/assets/lian-cat-banner.webp.asset.json";
 import smallDog from "@/assets/husky-special.png.asset.json";
 import footerCat from "@/assets/footer-cat.png.asset.json";
 import footerDog from "@/assets/footer-dog.png.asset.json";
@@ -332,7 +332,10 @@ function PromotionalBanner({
       <img
         src={isCat ? cat.url : kind === "small" ? smallDog.url : dog.url}
         alt={isCat ? "گربه بازیگوش لیان" : "سگ طلایی شاد لیان"}
+        width={900}
+        height={506}
         loading="lazy"
+        decoding="async"
       />
       <div className="promo-copy">
         <h2>{kind === "dog" ? "تخفیف ویژه" : "پیشنهادهای ویژه"}</h2>
