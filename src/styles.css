@@ -581,7 +581,7 @@ a {
   bottom: 0;
   width: 58%;
   height: 95%;
-  object-fit: cover;
+  object-fit: contain;
   mix-blend-mode: multiply;
   object-position: right bottom;
 }
@@ -639,7 +639,7 @@ a {
 .promo.cat img {
   width: 67%;
   height: 86%;
-  left: -10px;
+  left: 0;
 }
 .promo.cat .promo-copy {
   width: 80%;
@@ -1167,6 +1167,16 @@ a {
   }
 }
 @media (max-width: 480px) {
+  .footer-columns {
+    padding-bottom: 145px;
+  }
+  .footer-pet {
+    bottom: 125px;
+  }
+  .footer-bottom {
+    min-height: 125px;
+    align-content: center;
+  }
   .hero {
     min-height: 470px;
     display: block;
