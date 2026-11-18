@@ -13,11 +13,9 @@ import {
   Instagram,
   Mail,
   Menu,
-  Package,
   PawPrint,
   Search,
   Send,
-  ShieldCheck,
   ShoppingBag,
   ShoppingCart,
   Star,
@@ -327,6 +325,23 @@ function PromotionalBanner({
   select: (pet: string) => void;
 }) {
   const isCat = kind === "cat";
+  const imageRef = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    if (!isCat) return;
+    const reference = document.querySelector<HTMLImageElement>(".promo.dog img");
+    const image = imageRef.current;
+    if (!reference || !image) return;
+    const matchSize = () => {
+      image.style.setProperty(
+        "--reference-image-width",
+        `${reference.getBoundingClientRect().width}px`,
+      );
+    };
+    const observer = new ResizeObserver(matchSize);
+    observer.observe(reference);
+    matchSize();
+    return () => observer.disconnect();
+  }, [isCat]);
   const art = isCat
     ? { src: cat.url, w: 900, h: 507 }
     : kind === "small"
@@ -335,6 +350,7 @@ function PromotionalBanner({
   return (
     <section className={`promo ${kind}`}>
       <img
+        ref={imageRef}
         src={art.src}
         alt={isCat ? "گربه بازیگوش لیان" : "سگ طلایی شاد لیان"}
         width={art.w}
@@ -356,23 +372,6 @@ function PromotionalBanner({
           <strong>ویژه</strong>
         </div>
       )}
-    </section>
-  );
-}
-function BenefitsSection() {
-  return (
-    <section className="benefits" aria-label="خدمات لیان">
-      {[
-        { icon: ShieldCheck, title: "خرید با خیال راحت" },
-        { icon: Package, title: "تنوع محصولات" },
-        { icon: Headphones, title: "همراهی با مشتریان" },
-        { icon: Gift, title: "انتخاب‌های دوست‌داشتنی" },
-      ].map(({ icon: Icon, title }) => (
-        <div className="benefit" key={title}>
-          <Icon />
-          <span>{title}</span>
-        </div>
-      ))}
     </section>
   );
 }
@@ -643,7 +642,6 @@ export function Storefront() {
               toggle={toggle}
               reset={reset}
             />
-            <BenefitsSection />
             <PromotionalBanner kind="small" select={select} />
           </div>
         </div>

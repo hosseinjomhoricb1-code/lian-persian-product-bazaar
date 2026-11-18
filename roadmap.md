@@ -5,3 +5,6 @@
 - [x] Audit homepage image composition and button placement at desktop, tablet, and mobile sizes.
 - [x] Refine promotional and footer presentation without changing the hero, husky banner, assets, content, or shopping behavior.
 - [x] Recheck every homepage section, responsive overflow, controls, tests, and build.
+- [x] Match only the cat promotional image dimensions to the dog image across screen sizes.
+- [x] Remove the four-item benefits section and close its unused layout space.
+- [x] Visually verify both changes on desktop, tablet, and mobile.

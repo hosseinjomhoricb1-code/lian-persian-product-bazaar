@@ -30,6 +30,7 @@ use the editor.
 <!-- LOVABLE:END -->
 
 <!-- AGENT-MEMORY:BEGIN -->
+- Match the cat promo image width to the rendered dog image with a client-side ResizeObserver; unequal banner columns otherwise produce unequal image dimensions without changing the dog layout.
 - Keep the storefront in reusable frontend sections with editable local catalog data; this project requires a lightweight frontend demonstration without backend services.
 - Use cropped original reference pixels for logo, category, and product assets and the intact supplied hero artwork; this preserves reference fidelity without flattening the interface.
 - Keep all storefront visual styling in semantic global CSS tokens and use the shared Button for controls; this keeps presentation consistent and editable.
