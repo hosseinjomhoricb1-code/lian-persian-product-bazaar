@@ -328,7 +328,7 @@ function PromotionalBanner({
 }) {
   const isCat = kind === "cat";
   return (
-    <section className={`promo ${kind === "dog" ? "" : kind}`}>
+    <section className={`promo ${kind}`}>
       <img
         src={isCat ? cat.url : kind === "small" ? smallDog.url : dog.url}
         alt={isCat ? "گربه بازیگوش لیان" : "سگ طلایی شاد لیان"}

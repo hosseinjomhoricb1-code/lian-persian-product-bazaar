@@ -633,26 +633,55 @@ a {
 .discount strong {
   font-size: 23px;
 }
+.promo.dog,
 .promo.cat {
-  background: var(--sky);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 18px 0;
 }
+.promo.dog img,
 .promo.cat img {
-  width: 67%;
-  height: 86%;
-  left: 0;
+  position: relative;
+  inset: auto;
+  order: 2;
+  width: 78%;
+  height: 154px;
+  flex: 0 1 auto;
+  margin-top: auto;
+  object-position: center bottom;
+  mask-image:
+    linear-gradient(to right, transparent, oklch(0 0 0) 9%, oklch(0 0 0) 91%, transparent),
+    linear-gradient(to bottom, transparent, oklch(0 0 0) 8%, oklch(0 0 0) 82%, transparent);
+  mask-composite: intersect;
 }
+.promo.dog .promo-copy,
 .promo.cat .promo-copy {
-  width: 80%;
-  margin: auto;
-  padding: 14px 0;
-  text-align: right;
+  order: 1;
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 0;
+  text-align: center;
 }
+.promo.dog h2,
 .promo.cat h2 {
-  font-size: 22px;
+  font-size: 23px;
+  line-height: 1.5;
 }
+.promo.dog p,
+.promo.cat p {
+  margin-bottom: 14px;
+}
+.promo.dog .navy-button,
 .promo.cat .navy-button {
   position: relative;
-  margin-top: 117px;
+  height: 38px;
+  min-width: 140px;
+  margin-top: 0;
+  padding: 0 18px;
+}
+.promo.cat {
+  background: var(--sky);
 }
 .bottom-grid {
   margin-top: 20px;
@@ -833,6 +862,10 @@ a {
   bottom: 70px;
   width: 300px;
   pointer-events: none;
+  mask-image:
+    linear-gradient(to right, transparent, oklch(0 0 0) 12%, oklch(0 0 0) 88%, transparent),
+    linear-gradient(to bottom, transparent, oklch(0 0 0) 8%);
+  mask-composite: intersect;
 }
 .footer-pet.cat {
   left: 0;
@@ -868,7 +901,8 @@ a {
 .shop-dialog {
   background: var(--background);
   width: 440px;
-  max-width: 100%;
+  max-width: calc(100vw - 36px);
+  min-width: 0;
   max-height: 80vh;
   overflow: auto;
   border-radius: 18px;
@@ -1106,14 +1140,15 @@ a {
   .promo {
     min-height: 230px;
   }
-  .promo.cat .promo-copy {
-    width: 85%;
+  .shop-grid .promo.dog,
+  .shop-grid .promo.cat {
+    min-height: 280px;
+    padding-top: 22px;
   }
-  .promo.cat .navy-button {
-    margin-top: 90px;
-  }
+  .promo.dog img,
   .promo.cat img {
-    width: 48%;
+    width: 72%;
+    height: 130px;
   }
   .bottom-grid {
     grid-template-columns: 1fr;
@@ -1268,15 +1303,47 @@ a {
   .discount strong {
     font-size: 17px;
   }
-  .promo.cat h2 {
-    font-size: 18px;
+  .shop-grid .promo.dog,
+  .shop-grid .promo.cat {
+    min-height: 310px;
+    padding: 14px 12px 18px;
   }
+  .promo.dog img,
   .promo.cat img {
-    width: 73%;
-    height: 71%;
+    order: 1;
+    width: 100%;
+    height: 140px;
+    flex: none;
+    margin: 0 0 14px;
+    object-position: center;
   }
+  .promo.dog .promo-copy,
+  .promo.cat .promo-copy {
+    order: 2;
+    width: 100%;
+    margin: 0;
+  }
+  .promo.dog h2,
+  .promo.cat h2 {
+    font-size: 19px;
+  }
+  .promo.dog p,
+  .promo.cat p {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .promo.dog .navy-button,
   .promo.cat .navy-button {
-    margin-top: 85px;
+    width: 100%;
+    min-width: 0;
+    height: 34px;
+    font-size: 10px;
+    padding: 0 10px;
+  }
+  .promo.dog .discount {
+    top: 14px;
+    bottom: auto;
+    left: 10px;
   }
   .compact .product-picture {
     height: 90px;
