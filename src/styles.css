@@ -1013,6 +1013,15 @@ a {
     grid-template-columns: 1.15fr 2.5fr 0.95fr;
     gap: 10px;
   }
+  /* promo columns get narrow here: let the photo fill the card and drop the fixed height */
+  .shop-grid .promo.dog,
+  .shop-grid .promo.cat {
+    min-height: 0;
+  }
+  .promo.dog img,
+  .promo.cat img {
+    width: 100%;
+  }
   .promo h2 {
     font-size: 23px;
   }
@@ -1307,7 +1316,8 @@ a {
   }
   .shop-grid .promo.dog,
   .shop-grid .promo.cat {
-    min-height: 310px;
+    /* height follows the photo + text so no dead space sits under the button */
+    min-height: 0;
     padding: 14px 12px 18px;
   }
   .promo.dog img,
