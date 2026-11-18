@@ -327,13 +327,18 @@ function PromotionalBanner({
   select: (pet: string) => void;
 }) {
   const isCat = kind === "cat";
+  const art = isCat
+    ? { src: cat.url, w: 900, h: 507 }
+    : kind === "small"
+      ? { src: smallDog.url, w: 945, h: 990 }
+      : { src: dog.url, w: 900, h: 507 };
   return (
     <section className={`promo ${kind}`}>
       <img
-        src={isCat ? cat.url : kind === "small" ? smallDog.url : dog.url}
+        src={art.src}
         alt={isCat ? "گربه بازیگوش لیان" : "سگ طلایی شاد لیان"}
-        width={900}
-        height={506}
+        width={art.w}
+        height={art.h}
         loading="lazy"
         decoding="async"
       />
