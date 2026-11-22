@@ -1,19 +1,19 @@
-import food from "@/assets/food.png.asset.json";
-import toy from "@/assets/toy.png.asset.json";
-import care from "@/assets/care.png.asset.json";
-import bed from "@/assets/bed.png.asset.json";
-import collar from "@/assets/collar.png.asset.json";
-import carrier from "@/assets/carrier.png.asset.json";
-import clothing from "@/assets/clothing.png.asset.json";
-import other from "@/assets/other.png.asset.json";
-import kibble from "@/assets/kibble.png.asset.json";
-import rope from "@/assets/rope.png.asset.json";
-import sofa from "@/assets/sofa.png.asset.json";
-import brush from "@/assets/brush.png.asset.json";
-import hoodie from "@/assets/hoodie.png.asset.json";
-import litter from "@/assets/litter.png.asset.json";
-import duck from "@/assets/duck.png.asset.json";
-import tree from "@/assets/tree.png.asset.json";
+const food = { url: "/images/food.png" };
+const toy = { url: "/images/toy.png" };
+const care = { url: "/images/care.png" };
+const bed = { url: "/images/bed.png" };
+const collar = { url: "/images/collar.png" };
+const carrier = { url: "/images/carrier.png" };
+const clothing = { url: "/images/clothing.png" };
+const other = { url: "/images/other.png" };
+const kibble = { url: "/images/kibble.png" };
+const rope = { url: "/images/rope.png" };
+const sofa = { url: "/images/sofa.png" };
+const brush = { url: "/images/brush.png" };
+const hoodie = { url: "/images/hoodie.png" };
+const litter = { url: "/images/litter.png" };
+const duck = { url: "/images/duck.png" };
+const tree = { url: "/images/tree.png" };
 
 export const categories = [
   { id: "food", name: "غذای حیوانات", image: food.url },

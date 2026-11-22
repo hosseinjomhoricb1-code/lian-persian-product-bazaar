@@ -34,13 +34,13 @@ import {
   products,
   type Product,
 } from "@/lib/catalog";
-import logo from "@/assets/lian-logo.png.asset.json";
-import hero from "@/assets/lian-hero.png.asset.json";
-import dog from "@/assets/lian-dog-banner.webp.asset.json";
-import cat from "@/assets/lian-cat-banner.webp.asset.json";
-import smallDog from "@/assets/husky-special.png.asset.json";
-import footerCat from "@/assets/footer-cat.png.asset.json";
-import footerDog from "@/assets/footer-dog.png.asset.json";
+const logo = { url: "/images/lian-logo.png" };
+const hero = { url: "/images/lian-hero.png" };
+const dog = { url: "/images/lian-dog-banner.webp" };
+const cat = { url: "/images/lian-cat-banner.webp" };
+const smallDog = { url: "/images/husky-special.png" };
+const footerCat = { url: "/images/footer-cat.png" };
+const footerDog = { url: "/images/footer-dog.png" };
 
 function AnnouncementBar() {
   return (
